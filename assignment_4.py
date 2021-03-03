@@ -25,16 +25,16 @@ plt.title ("IODP Expedition 303, Site U1302-03")
 plt.xlabel ("Meters Composite Depth")
 plt.ylabel ("Magnetic Susceptibility") 
 plt.show(block=True)
-susc_figure.savefig('./susceptibility-with-depth.png')
+susc_figure.savefig('results/susceptibility-with-depth.png')
 
 #let script write pandas dataset into .json file
 all_data = pd.read_csv("1302_susc_data.csv", header=2)
 all_data.info()
-all_data.to_json("data_output.json")
+all_data.to_json("results/data_output.json")
 
 print(all_data.loc['0.3':'1',:])
 
-json_data = pd.read_json("data_output.json")
+json_data = pd.read_json("results/data_output.json")
 json_data.info()
 
 print(json_data.loc['0.3':'1',:])
