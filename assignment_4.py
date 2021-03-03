@@ -9,7 +9,7 @@ import pandas as pd
 
 #test comment
 # Create an array (a multi-dimensional table) out of our data file, full of text
-all_data = np.genfromtxt("1302_susc_data.csv", delimiter=',',skip_header=3)
+all_data = np.genfromtxt("data/1302_susc_data.csv", delimiter=',',skip_header=3)
 print(all_data)
 
 #to divide the data sets in output
@@ -28,7 +28,7 @@ plt.show(block=True)
 susc_figure.savefig('results/susceptibility-with-depth.png')
 
 #let script write pandas dataset into .json file
-all_data = pd.read_csv("1302_susc_data.csv", header=2)
+all_data = pd.read_csv("data/1302_susc_data.csv", header=2)
 all_data.info()
 all_data.to_json("results/data_output.json")
 
