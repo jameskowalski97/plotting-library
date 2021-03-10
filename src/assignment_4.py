@@ -7,16 +7,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-#test comment
-def read_data():
+#Created read_data function
+def read_data(filename):
     # Create an array (a multi-dimensional table) out of our data file, full of text
-    all_data = np.genfromtxt("data/1302_susc_data.csv", delimiter=',',skip_header=3)
+    all_data = np.genfromtxt(filename, delimiter=',',skip_header=3)
     print(all_data)
+    
     # Select the data range we are interested in, convert it into a new array, full of numbers
     susc_data = np.array(all_data[:,:], dtype=float)
     return susc_data
 
-susc_data = read_data()
+susc_data = read_data("data/1302_susc_data.csv")
 
 #Create a figure of the processed data
 susc_figure = plt.figure()
