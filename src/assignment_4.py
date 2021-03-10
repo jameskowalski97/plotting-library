@@ -8,15 +8,15 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 #test comment
-# Create an array (a multi-dimensional table) out of our data file, full of text
-all_data = np.genfromtxt("data/1302_susc_data.csv", delimiter=',',skip_header=3)
-print(all_data)
+def read_data():
+    # Create an array (a multi-dimensional table) out of our data file, full of text
+    all_data = np.genfromtxt("data/1302_susc_data.csv", delimiter=',',skip_header=3)
+    print(all_data)
+    # Select the data range we are interested in, convert it into a new array, full of numbers
+    susc_data = np.array(all_data[:,:], dtype=float)
+    return susc_data
 
-#to divide the data sets in output
-print("~~~~~~~~~~~~~~~~~~~~~")
-# Select the data range we are interested in, convert it into a new array, full of numbers
-susc_data = np.array(all_data[:,:], dtype=float)
-print(susc_data)
+susc_data = read_data()
 
 #Create a figure of the processed data
 susc_figure = plt.figure()
