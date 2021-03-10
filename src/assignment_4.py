@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 #Created read_data function
-def read_data(filename):
+def read_data(filename,delimiter=','):
     """ This function reads data from specified filename. The specified filename should point to a specified .csv """
     # Create an array (a multi-dimensional table) out of our data file, full of text
-    all_data = np.genfromtxt(filename, delimiter=',',skip_header=3)
+    all_data = np.genfromtxt(filename, delimiter=delimiter,skip_header=3)
     print(all_data)
     
     # Select the data range we are interested in, convert it into a new array, full of numbers
