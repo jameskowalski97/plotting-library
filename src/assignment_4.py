@@ -9,6 +9,7 @@ import pandas as pd
 
 #Created read_data function
 def read_data(filename):
+    """ This function reads data from specified filename. The specified filename should point to a specified .csv """
     # Create an array (a multi-dimensional table) out of our data file, full of text
     all_data = np.genfromtxt(filename, delimiter=',',skip_header=3)
     print(all_data)
@@ -16,6 +17,9 @@ def read_data(filename):
     # Select the data range we are interested in, convert it into a new array, full of numbers
     susc_data = np.array(all_data[:,:], dtype=float)
     return susc_data
+
+#will read dock string within read_data function
+help (read_data)
 
 susc_data = read_data("data/1302_susc_data.csv")
 
