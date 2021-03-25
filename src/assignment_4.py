@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-#Created read_data function
+#Create read_data function
 def read_data(filename,delimiter=','):
     """ This function reads data from specified filename. The specified filename should point to a specified .csv """
     # Create an array (a multi-dimensional table) out of our data file, full of text
@@ -19,7 +19,7 @@ def read_data(filename,delimiter=','):
     return susc_data
 
 #will read dock string within read_data function
-help (read_data)
+#help (read_data)
 
 susc_data = read_data("data/1302_susc_data.csv")
 
