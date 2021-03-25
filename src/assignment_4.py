@@ -23,14 +23,19 @@ def read_data(filename,delimiter=','):
 
 susc_data = read_data("data/1302_susc_data.csv")
 
-#Create a figure of the processed data
-susc_figure = plt.figure()
-susc_plot = plt.scatter (susc_data[:,0],susc_data[:,1])
-plt.title ("IODP Expedition 303, Site U1302-03")
-plt.xlabel ("Meters Composite Depth")
-plt.ylabel ("Magnetic Susceptibility") 
-plt.show(block=True)
-susc_figure.savefig('results/susceptibility-with-depth.png')
+#Create plot_figure function
+def plot_figure ():
+    #Create a figure of the processed data
+    susc_figure = plt.figure()
+    susc_plot = plt.scatter (susc_data[:,0],susc_data[:,1])
+    plt.title ("IODP Expedition 303, Site U1302-03")
+    plt.xlabel ("Meters Composite Depth")
+    plt.ylabel ("Magnetic Susceptibility") 
+    plt.show(block=True)
+    susc_figure.savefig('results/susceptibility-with-depth.png')
+
+#Print plot_figure
+#plot_figure()
 
 #let script write pandas dataset into .json file
 all_data = pd.read_csv("data/1302_susc_data.csv", header=2)
