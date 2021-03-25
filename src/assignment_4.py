@@ -37,15 +37,20 @@ def plot_figure ():
 #Print plot_figure
 #plot_figure()
 
-#let script write pandas dataset into .json file
-all_data = pd.read_csv("data/1302_susc_data.csv", header=2)
-all_data.info()
-all_data.to_json("results/data_output.json")
+#Create pandas_to_json function
+def pandas_to_json ():
+    #let script write pandas dataset into .json file
+    all_data = pd.read_csv("data/1302_susc_data.csv", header=2)
+    all_data.info()
+    all_data.to_json("results/data_output.json")
 
-print(all_data.loc['0.3':'1',:])
+    print(all_data.loc['0.3':'1',:])
 
-json_data = pd.read_json("results/data_output.json")
-json_data.info()
+    json_data = pd.read_json("results/data_output.json")
+    json_data.info()
 
-print(json_data.loc['0.3':'1',:])
+    print(json_data.loc['0.3':'1',:])
+
+#Print pandas_to_json
+#pandas_to_json()
 
