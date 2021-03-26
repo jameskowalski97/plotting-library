@@ -18,6 +18,7 @@ def read_data(filename,delimiter=','):
     susc_data = np.array(all_data[:,:], dtype=float)
     return susc_data
 
+#test comment for new branch
 #will read dock string within read_data function
 #help (read_data)
 
