@@ -22,10 +22,10 @@ def read_data(filename,delimiter=','):
 #will read dock string within read_data function
 #help (read_data)
 
-susc_data = read_data("data/1302_susc_data.csv")
+#susc_data = read_data("data/1302_susc_data.csv")
 
 #Create plot_figure function
-def plot_figure ():
+def plot_figure (susc_data, plot_filename):
     #Create a figure of the processed data
     susc_figure = plt.figure()
     susc_plot = plt.scatter (susc_data[:,0],susc_data[:,1])
@@ -36,7 +36,7 @@ def plot_figure ():
     susc_figure.savefig('results/susceptibility-with-depth.png')
 
 #Print plot_figure
-#plot_figure()
+print(plot_figure)
 
 #Create pandas_to_json function
 def pandas_to_json ():
