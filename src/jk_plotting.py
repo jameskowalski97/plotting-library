@@ -35,8 +35,6 @@ def plot_figure (susc_data, plot_filename):
     plt.show(block=True)
     susc_figure.savefig(plot_filename)
 
-#Print plot_figure
-#print(plot_figure)
 
 #Create pandas_to_json function
 def pandas_to_json (filename, output_filename):
