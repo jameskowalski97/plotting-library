@@ -6,6 +6,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+import os as os
 
 #Create read_data function
 def read_data(filename,delimiter=','):
