@@ -53,6 +53,10 @@ def plot():
     data_directory = os.path.realpath(os.path.join(os.path.dirname(__file__),"..","data"))
     results_directory = os.path.realpath(os.path.join(os.path.dirname(__file__),"..","results"))
 
+    input_filename = os.path.join(data_directory, input_file)
+    plot_filename = os.path.join(data_directory, plot_file)
+    json_output_file = os.path.join(data_directory, json_output_file)
+
 #Print pandas_to_json
 #pandas_to_json()
 
