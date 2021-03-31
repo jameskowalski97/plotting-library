@@ -58,6 +58,7 @@ def plot():
     json_output_file = os.path.join(data_directory, json_output_file)
 
     susc_data = read_data(input_filename, starting_row=4)
+    plot_data(susc_data, plot_filename)
 
 #Print pandas_to_json
 #pandas_to_json()
