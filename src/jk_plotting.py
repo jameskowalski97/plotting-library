@@ -7,6 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import os as os
+import sys 
 
 #Create read_data function
 def read_data(filename,delimiter=','):
@@ -56,9 +57,13 @@ def plot():
     plot_filename = os.path.join(data_directory, plot_file)
     json_output_file = os.path.join(data_directory, json_output_file)
 
-    susc_data = read_data(input_filename, starting_row=4)
+    susc_data = read_data(input_filename)
     plot_figure(susc_data, plot_filename)
     pandas_to_json(input_filename, json_output_file)
+
+if __name__ == "__main__":
+    print(sys.argv)
+    plot()
 
 
 
