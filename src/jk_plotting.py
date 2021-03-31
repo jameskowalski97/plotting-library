@@ -22,7 +22,6 @@ def read_data(filename,delimiter=','):
 #will read dock string within read_data function
 #help (read_data)
 
-#susc_data = read_data("data/1302_susc_data.csv")
 
 #Create plot_figure function
 def plot_figure (susc_data, plot_filename):
@@ -61,6 +60,5 @@ def plot():
     plot_figure(susc_data, plot_filename)
     pandas_to_json(input_filename, json_output_file)
 
-#Print pandas_to_json
-#pandas_to_json()
+
 
