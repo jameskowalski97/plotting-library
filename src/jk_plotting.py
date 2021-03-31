@@ -39,11 +39,11 @@ def plot_figure (susc_data, plot_filename):
 print(plot_figure)
 
 #Create pandas_to_json function
-def pandas_to_json ():
+def pandas_to_json (filename, output_filename):
     #let script write pandas dataset into .json file
-    all_data = pd.read_csv("data/1302_susc_data.csv", header=2)
+    all_data = pd.read_csv(filename, header=2)
     all_data.info()
-    all_data.to_json("results/data_output.json")
+    all_data.to_json(output_filename)
 
     print(all_data.loc['0.3':'1',:])
 
