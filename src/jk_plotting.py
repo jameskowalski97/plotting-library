@@ -45,12 +45,10 @@ def pandas_to_json (filename, output_filename):
     all_data.info()
     all_data.to_json(output_filename)
 
-    print(all_data.loc['0.3':'1',:])
-
-    json_data = pd.read_json("results/data_output.json")
-    json_data.info()
-
-    print(json_data.loc['0.3':'1',:])
+def plot():
+    input_file = "1302_susc_data.csv"
+    plot_file = "susceptibility-with-depth.pdf"
+    json_output_file = "data_output.json"
 
 #Print pandas_to_json
 #pandas_to_json()
