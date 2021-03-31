@@ -33,10 +33,10 @@ def plot_figure (susc_data, plot_filename):
     plt.xlabel ("Meters Composite Depth")
     plt.ylabel ("Magnetic Susceptibility") 
     plt.show(block=True)
-    susc_figure.savefig('results/susceptibility-with-depth.png')
+    susc_figure.savefig(plot_filename)
 
 #Print plot_figure
-print(plot_figure)
+#print(plot_figure)
 
 #Create pandas_to_json function
 def pandas_to_json (filename, output_filename):
@@ -58,7 +58,8 @@ def plot():
     json_output_file = os.path.join(data_directory, json_output_file)
 
     susc_data = read_data(input_filename, starting_row=4)
-    plot_data(susc_data, plot_filename)
+    plot_figure(susc_data, plot_filename)
+    pandas_to_json(input_filename, json_output_file)
 
 #Print pandas_to_json
 #pandas_to_json()
