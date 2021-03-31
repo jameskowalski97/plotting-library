@@ -50,6 +50,9 @@ def plot():
     plot_file = "susceptibility-with-depth.pdf"
     json_output_file = "data_output.json"
 
+    data_directory = os.path.realpath(os.path.join(os.path.dirname(__file__),"..","data"))
+    results_directory = os.path.realpath(os.path.join(os.path.dirname(__file__),"..","results"))
+
 #Print pandas_to_json
 #pandas_to_json()
 
