@@ -22,3 +22,18 @@ def test_read_data():
 
     assert(susc_data[0,1] == 0.2827)
 
+
+#This test function checks if the data can be plotted
+def test_plot_figure():
+    plot_file = "test_plot_figure.pdf"
+    results_directory = os.path.realpath(os.path.join(os.path.dirname(__file__),"..","results"))
+    plot_filename = os.path.join(results_directory,plot_file)
+
+    input_data = np.array([[0,0],[2,101]])
+
+    if os.path.exists(plot_filename):
+        os.remove(plot_filename)
+        
+    plotting.plot_figure(input_data, plot_filename)
+
+    assert (os.path.exists(plot_filename))
