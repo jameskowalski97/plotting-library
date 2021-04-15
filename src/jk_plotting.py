@@ -27,7 +27,7 @@ def plot_figure (susc_data, plot_filename):
     susc_plot = plt.scatter (susc_data[:,0],susc_data[:,1])
     plt.title ("IODP Expedition 303, Site U1302-03")
     plt.xlabel ("Meters Composite Depth")
-    plt.ylabel ("Magnetic Susceptibility") 
+    plt.ylabel ("Magnetic Susceptibility")
     plt.show(block=True)
     susc_figure.savefig(plot_filename)
 
@@ -40,7 +40,7 @@ def pandas_to_json (filename, output_filename):
     all_data.to_json(output_filename)
 
 def plot():
-    """ """
+    """ plot """
     input_file = "1302_susc_data.csv"
     plot_file = "susceptibility-with-depth.pdf"
     json_output_file = "data_output.json"
