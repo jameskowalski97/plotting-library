@@ -11,10 +11,12 @@ import src.plotting as plotting
 
 #This Test function checks if the plotting function works
 def test_plot():
-    assert(plotting.plot() == None)
+    """A test for the plot() function"""
+    assert(plotting.plot() is None)
 
 #This test function checks if the data is being read correctly from the .csv file
 def test_read_data():
+    """A test for the read_data() function"""
     input_file = "1302_susc_data.csv"
     data_directory = os.path.realpath(os.path.join(os.path.dirname(__file__),"..","data"))
     input_filename = os.path.join(data_directory, input_file)
@@ -25,6 +27,7 @@ def test_read_data():
 
 #This test function checks if the data can be plotted
 def test_plot_figure():
+    """A test for the plot_figure() function"""
     plot_file = "test_plot_figure.pdf"
     results_directory = os.path.realpath(os.path.join(os.path.dirname(__file__),"..","results"))
     plot_filename = os.path.join(results_directory,plot_file)
