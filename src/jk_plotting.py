@@ -2,20 +2,20 @@
 
 # Import the libraries we are using. It is good practice to import all necessary
 # libraries in the first lines of a file.
-
+import os as os
+import sys 
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-import os as os
-import sys 
 
 #Create read_data function
 def read_data(filename,delimiter=','):
-    """ This function reads data from specified filename. The specified filename should point to a specified .csv """
+    """ This function reads data from specified filename. The specified filename 
+    should point to a specified .csv """
     # Create an array (a multi-dimensional table) out of our data file, full of text
     all_data = np.genfromtxt(filename, delimiter=delimiter,skip_header=3)
     print(all_data)
-    
+
     # Select the data range we are interested in, convert it into a new array, full of numbers
     susc_data = np.array(all_data[:,:], dtype=float)
     return susc_data
