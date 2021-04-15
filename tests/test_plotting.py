@@ -1,4 +1,5 @@
 """this file contains all tests for plotting library"""
+#TODO: fix pylint warnings#
 
 import sys
 import os
@@ -15,7 +16,7 @@ import src.plotting as plotting
 #This Test function checks if the plotting function works
 def test_plot():
     """A test for the plot() function"""
-    assert(plotting.plot() is None)
+    assert(plotting.plot() is None
 
 #This test function checks if the data is being read correctly from the .csv file
 def test_read_data():
@@ -39,7 +40,7 @@ def test_plot_figure():
 
     if os.path.exists(plot_filename):
         os.remove(plot_filename)
-        
+
     plotting.plot_figure(input_data, plot_filename)
 
     assert (os.path.exists(plot_filename))
