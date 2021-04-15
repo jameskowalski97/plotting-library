@@ -1,4 +1,7 @@
-import sys, os
+"""this file contains all tests for plotting library"""
+
+import sys
+import os
 import numpy as np
 import pandas as pd
 
