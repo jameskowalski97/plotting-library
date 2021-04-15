@@ -10,7 +10,7 @@ import pandas as pd
 
 #Create read_data function
 def read_data(filename,delimiter=','):
-    """ This function reads data from specified filename. The specified filename 
+    """ This function reads data from specified filename. The specified filename
     should point to a specified .csv """
     # Create an array (a multi-dimensional table) out of our data file, full of text
     all_data = np.genfromtxt(filename, delimiter=delimiter,skip_header=3)
@@ -20,13 +20,9 @@ def read_data(filename,delimiter=','):
     susc_data = np.array(all_data[:,:], dtype=float)
     return susc_data
 
-#will read dock string within read_data function
-#help (read_data)
-
-
 #Create plot_figure function
 def plot_figure (susc_data, plot_filename):
-    #Create a figure of the processed data
+    """Create a figure of the processed data"""
     susc_figure = plt.figure()
     susc_plot = plt.scatter (susc_data[:,0],susc_data[:,1])
     plt.title ("IODP Expedition 303, Site U1302-03")
@@ -38,12 +34,13 @@ def plot_figure (susc_data, plot_filename):
 
 #Create pandas_to_json function
 def pandas_to_json (filename, output_filename):
-    #let script write pandas dataset into .json file
+    """let script write pandas dataset into .json file"""
     all_data = pd.read_csv(filename, header=2)
     all_data.info()
     all_data.to_json(output_filename)
 
 def plot():
+    """ """
     input_file = "1302_susc_data.csv"
     plot_file = "susceptibility-with-depth.pdf"
     json_output_file = "data_output.json"
@@ -62,6 +59,3 @@ def plot():
 if __name__ == "__main__":
     print(sys.argv)
     plot()
-
-
-
