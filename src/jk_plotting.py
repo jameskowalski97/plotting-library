@@ -1,4 +1,7 @@
 #!/bin/python
+#TODO: fix pylint warnings#
+#Rene, I was fixed some pylint warnings, saved the file, and then got a test discovery fail error. The tests were working fine before this save.#
+
 
 # Import the libraries we are using. It is good practice to import all necessary
 # libraries in the first lines of a file.
